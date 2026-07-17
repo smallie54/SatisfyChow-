@@ -5,7 +5,6 @@ import Home from './pages/home-page/home'
 import PlaceOrder from './pages/Place-Order-page/PlaceOrder'
 import Cart from './pages/cart-page/cart'
 import StoreProvider from './context/StoreProvider'  
-import TrackOrder from './pages/TrackOrderPage/TrackOrder'
 
 function App() {
 
@@ -17,7 +16,6 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/Cart-page' element={<Cart />} />
           <Route path='/Place-Order-page' element={<PlaceOrder />} />
-          <Route path='/TrackOrderPage' element={<TrackOrder />} />
         </Routes>
       </div>
     </StoreProvider>

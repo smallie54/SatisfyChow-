@@ -1,11 +1,11 @@
 import React from 'react'
-import { MdRestaurant, MdDeliveryDining } from 'react-icons/md'
-import { FaHome } from 'react-icons/fa'
 
-const OrderMap = ({ order }) => {
+const OrderMap = () => {
   return (
     <div className="order-map">
+      {/* Map background */}
       <div className="map-bg">
+
         {/* Road lines */}
         <div className="map-road horizontal" style={{ top: '40%', left: '0', width: '100%' }}></div>
         <div className="map-road horizontal" style={{ top: '60%', left: '0', width: '100%' }}></div>
@@ -34,30 +34,27 @@ const OrderMap = ({ order }) => {
 
         {/* Restaurant pin */}
         <div className="map-pin restaurant-pin" style={{ top: '35%', left: '10%' }}>
-          <div className="pin-icon">
-            <MdRestaurant size={16} color="#fff" style={{ transform: 'rotate(45deg)' }} />
-          </div>
+          <div className="pin-icon">🍽️</div>
           <div className="pin-label">
-            <p className="pin-title">{order.restaurant.name}</p>
-            <p className="pin-sub">{order.restaurant.note}</p>
+            <p className="pin-title">Satisfy Chow Restaurant</p>
+            <p className="pin-sub">Preparing your order</p>
           </div>
         </div>
 
         {/* Rider icon */}
         <div className="map-rider" style={{ top: '38%', left: '48%' }}>
-          <MdDeliveryDining size={28} color="#F97316" />
+          🛵
         </div>
 
         {/* Destination pin */}
         <div className="map-pin destination-pin" style={{ top: '30%', left: '72%' }}>
-          <div className="pin-icon green">
-            <FaHome size={14} color="#fff" style={{ transform: 'rotate(45deg)' }} />
-          </div>
+          <div className="pin-icon green">🏠</div>
           <div className="pin-label right">
             <p className="pin-title">Your Location</p>
-            <p className="pin-sub">{order.deliveryAddress.title}</p>
+            <p className="pin-sub">Lekki Phase 1, Lagos</p>
           </div>
         </div>
+
       </div>
     </div>
   )
