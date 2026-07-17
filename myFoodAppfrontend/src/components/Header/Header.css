@@ -1,0 +1,188 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 60px 40px;
+  background: #FFF8F3;
+  gap: 40px;
+  min-height: 85vh;
+}
+
+/* ── LEFT SIDE ── */
+.header-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 520px;
+}
+
+.header-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FEF3E9;
+  color: #F97316;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 50px;
+  width: fit-content;
+}
+
+.header-title {
+  font-size: 58px;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.header-title-orange {
+  color: #F97316;
+}
+
+.header-desc {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Search bar */
+.header-search {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1.5px solid #e8e8e8;
+  border-radius: 50px;
+  padding: 8px 8px 8px 16px;
+  gap: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+.header-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #333;
+  background: transparent;
+}
+
+.header-search input::placeholder {
+  color: #aaa;
+}
+
+.header-search button {
+  background: #F97316;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.header-search button:hover {
+  background: #ea6a0a;
+}
+
+/* Badges */
+.header-badges {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge-icon {
+  font-size: 28px;
+}
+
+.badge-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.badge-sub {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+/* ── RIGHT SIDE ── */
+.header-right {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-food-img {
+  width: 100%;
+  max-width: 560px;
+  object-fit: contain;
+  border-radius: 24px;
+}
+
+/* Rating card */
+.header-rating-card {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  background: white;
+  border-radius: 16px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+.rating-avatars {
+  display: flex;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #F97316;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  margin-left: -8px;
+}
+
+.avatar:first-child {
+  margin-left: 0;
+}
+
+.rating-score {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.rating-label {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}

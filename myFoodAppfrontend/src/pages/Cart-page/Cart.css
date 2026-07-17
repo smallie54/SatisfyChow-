@@ -1,0 +1,518 @@
+.cart {
+  padding: 40px 60px;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+/* Page header */
+.cart-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.cart-page-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 6px 0;
+}
+
+.cart-underline {
+  width: 48px;
+  height: 3px;
+  background: #F97316;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.cart-breadcrumb {
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+  cursor: pointer;
+}
+
+.cart-breadcrumb span:first-child:hover {
+  color: #F97316;
+}
+
+.breadcrumb-active {
+  color: #F97316;
+  font-weight: 600;
+}
+
+.cart-secure-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  border-radius: 12px;
+  padding: 12px 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.secure-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.secure-sub {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+/* Body layout */
+.cart-body {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 28px;
+  align-items: start;
+}
+
+/* Left */
+.cart-left {
+  background: white;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+}
+
+.cart-left h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 20px 0;
+}
+
+.cart-table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 0.3fr;
+  padding: 0 0 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 13px;
+  color: #888;
+  font-weight: 500;
+}
+
+.cart-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 16px;
+}
+
+.cart-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 0.3fr;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.cart-item-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cart-item-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.cart-item-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 4px 0;
+}
+
+.cart-item-restaurant {
+  font-size: 12px;
+  color: #888;
+  margin: 0 0 6px 0;
+}
+
+.cart-item-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.cart-item-price,
+.cart-item-total {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+/* Quantity counter */
+.cart-counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #FEF3E9;
+  border: 1.5px solid #F97316;
+  border-radius: 50px;
+  padding: 6px 12px;
+  width: fit-content;
+}
+
+.cart-counter button {
+  background: #F97316;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.cart-counter button:hover {
+  background: #ea6a0a;
+}
+
+.cart-counter span {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+  min-width: 20px;
+  text-align: center;
+}
+
+.cart-delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.cart-delete-btn:hover {
+  background: #FEF3E9;
+}
+
+/* Cart actions */
+.cart-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.continue-btn {
+  background: white;
+  border: 1.5px solid #F97316;
+  color: #F97316;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.continue-btn:hover {
+  background: #FEF3E9;
+}
+
+.clear-btn {
+  background: #FEF3E9;
+  border: 1.5px solid #F97316;
+  color: #F97316;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.clear-btn:hover {
+  background: #fee2d0;
+}
+
+/* Right — Order Summary */
+.cart-right {
+  background: white;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: sticky;
+  top: 100px;
+}
+
+.cart-right h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #555;
+}
+
+.summary-divider {
+  height: 1px;
+  background: #f0f0f0;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.total-amount {
+  color: #F97316;
+}
+
+.summary-savings {
+  background: #E8F8F0;
+  color: #0F6E56;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Promo */
+.promo-section {
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.promo-toggle {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.promo-input {
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.promo-input input {
+  flex: 1;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  outline: none;
+}
+
+.promo-input button {
+  background: #F97316;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Checkout */
+.checkout-btn {
+  background: #F97316;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s;
+}
+
+.checkout-btn:hover {
+  background: #ea6a0a;
+}
+
+.checkout-or {
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+}
+
+.paystack-btn {
+  background: #FEF3E9;
+  color: #1a1a1a;
+  border: 1.5px solid #f0e0d0;
+  border-radius: 50px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+
+.paystack-btn:hover {
+  background: #fee2d0;
+}
+
+.payment-secure {
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+/* Delivery info */
+.delivery-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.delivery-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.delivery-icon {
+  font-size: 28px;
+}
+
+.delivering-to {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+.delivery-address {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.change-link {
+  color: #F97316;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.delivery-time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #555;
+  padding: 0 4px;
+}
+
+/* Trust badges */
+.cart-trust-badges {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+  background: white;
+  border-radius: 16px;
+  padding: 24px 32px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.trust-badge span {
+  font-size: 32px;
+}
+
+.trust-badge p:first-child {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.trust-badge p:last-child {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+/* Empty cart */
+.cart-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 16px;
+  text-align: center;
+}
+
+.cart-empty h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.cart-empty p {
+  font-size: 15px;
+  color: #888;
+}
+
+.cart-empty button {
+  background: #F97316;
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}

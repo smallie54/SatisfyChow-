@@ -1,0 +1,76 @@
+.how-it-works {
+  padding: 60px 60px;
+  background: #FFF8F3;
+}
+
+.how-it-works-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.how-it-works-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+}
+
+.how-it-works-underline {
+  width: 60px;
+  height: 3px;
+  background: #F97316;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+
+.how-it-works-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 180px;
+  gap: 14px;
+}
+
+.step-icon-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #F97316;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(249, 115, 22, 0.15);
+}
+
+.step-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.step-desc {
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+  line-height: 1.6;
+}
+
+
+.step-connector {
+  flex: 1;
+  border-top: 2px dashed #F9731660;
+  margin-bottom: 60px;
+  max-width: 80px;
+}
