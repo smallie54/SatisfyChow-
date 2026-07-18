@@ -130,3 +130,44 @@
   background: #ea6a0a;
   transform: scale(1.02);
 }
+@media (max-width:1050px) {
+  .navbar.logo {
+    width: 140px;
+  }
+  .navbar-links {
+    gap: 24px;
+    font-size: 16px;
+  }
+  .navbar-actions {
+    gap: 16px;
+  }
+  .navbar-actions .signin-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+@media (max-width:900px) {
+  .navbar.logo {
+    width: 100px;
+  }
+  .navbar-links {
+    gap: 15px;
+    font-size: 13px;
+  }
+  .navbar-actions {
+    gap: 14px;
+  }
+  .navbar-actions .signin-btn {
+    padding: 7px 20px;
+    font-size: 13px;
+  }
+}
+@media (max-width:750px) {
+  .navbar-links {
+    display: none;
+  }
+  .navbar-actions {
+    gap: 15px;
+  }
+ 
+}
