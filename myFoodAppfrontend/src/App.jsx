@@ -7,6 +7,7 @@ import Cart from './pages/cart-page/cart'
 import StoreProvider from './context/StoreProvider'
 import TrackOrder from './pages/TrackOrderPage/TrackOrder'
 import Checkout from './pages/CheckOutPage/Checkout'
+import LoginModal from './pages/LoginPage/LoginModal'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <StoreProvider>
       < div className="app">
         <Navbar />
+        <LoginModal />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/Cart-page' element={<Cart />} />

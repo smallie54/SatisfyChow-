@@ -1,0 +1,333 @@
+.login-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: backdropFadeIn 0.2s ease;
+}
+
+@keyframes backdropFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.login-modal-card {
+  position: relative;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  width: 100%;
+  max-width: 440px;
+  max-height: 90vh;
+  overflow: hidden;
+  animation: modalPopIn 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes modalPopIn {
+  from { transform: scale(0.94); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.login-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #555;
+}
+
+.login-modal-close:hover {
+  background: #eee;
+}
+
+/* Two views sit side by side; sliding the inner track left reveals the second. */
+.login-modal-inner {
+  display: flex;
+  width: 200%;
+  transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.login-modal-inner.show-preview {
+  transform: translateX(-50%);
+}
+
+.login-modal-view {
+  width: 50%;
+  flex-shrink: 0;
+  padding: 40px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* old Edge/IE */
+}
+
+.login-modal-view::-webkit-scrollbar {
+  display: none;               /* Chrome, Safari, new Edge */
+}
+
+.accent {
+  color: #F97316;
+}
+
+.link {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.login-modal-form-view h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 6px 0;
+}
+
+.login-modal-subtext {
+  font-size: 13px;
+  color: #888;
+  margin: 0 0 24px 0;
+}
+
+.login-modal-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.login-modal-input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 18px;
+}
+
+.login-modal-input-group input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  color: #1a1a1a;
+  background: transparent;
+  min-width: 0;
+}
+
+.login-modal-eye-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+
+.login-modal-error {
+  font-size: 12px;
+  color: #d64545;
+  margin: -10px 0 14px 0;
+}
+
+.login-modal-row-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 24px;
+  gap: 12px;
+}
+
+.login-modal-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.login-modal-submit-btn {
+  width: 100%;
+  background: #F97316;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+
+.login-modal-submit-btn:hover:not(:disabled) {
+  background: #E0650E;
+}
+
+.login-modal-submit-btn:disabled {
+  opacity: 0.85;
+  cursor: default;
+}
+
+.login-modal-divider {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  margin: 24px 0;
+  position: relative;
+}
+
+.login-modal-divider::before,
+.login-modal-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 32%;
+  height: 1px;
+  background: #eee;
+}
+
+.login-modal-divider::before { left: 0; }
+.login-modal-divider::after { right: 0; }
+
+.login-modal-social-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.login-modal-social-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1.5px solid #e5e5e5;
+  background: white;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+}
+
+.login-modal-social-btn:hover:not(:disabled) {
+  background: #fafafa;
+}
+
+.login-modal-secure-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #777;
+  margin: 0;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Home preview view, scaled to fit the modal footprint */
+.login-modal-preview-view {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.login-modal-preview-view .home-preview-badge {
+  display: inline-block;
+  background: #E8F8F0;
+  color: #0F6E56;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+}
+
+.login-modal-preview-view .home-preview h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+}
+
+.login-modal-preview-view .home-preview p {
+  font-size: 13px;
+  color: #555;
+  margin: 0 0 20px 0;
+  line-height: 1.5;
+}
+
+.login-modal-preview-view .home-preview-cards {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.login-modal-preview-view .home-preview-card {
+  background: #fafafa;
+  border-radius: 14px;
+  padding: 12px;
+  flex: 1;
+}
+
+.login-modal-preview-view .home-preview-card-img {
+  width: 100%;
+  height: 70px;
+  border-radius: 8px;
+  background: #FEF3E9;
+  margin-bottom: 8px;
+  object-fit: cover;
+  display: block;
+}
+
+.login-modal-preview-view .home-preview-card-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 2px 0;
+}
+
+.login-modal-preview-view .home-preview-card-sub {
+  font-size: 11px;
+  color: #888;
+  margin: 0;
+}
+
+.login-modal-continue-btn {
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: stretch;
+}
+
+@media (max-width: 480px) {
+  .login-modal-view {
+    padding: 28px 20px;
+  }
+}

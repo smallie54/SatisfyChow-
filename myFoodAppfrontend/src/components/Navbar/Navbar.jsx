@@ -1,15 +1,16 @@
 import React, { useContext, useState } from 'react'
 import './Navbar.css'
 import { assets } from '../../assets/assets'
-import { FiShoppingCart } from 'react-icons/fi'
+import { FiShoppingCart, FiMenu, FiX } from 'react-icons/fi'
 import { StoreContext } from '../../context/StoreContext'
 import { useNavigate, useLocation } from 'react-router-dom'
 
 const Navbar = () => {
-  const { getCartCount } = useContext(StoreContext)
+  const { getCartCount, openLoginModal } = useContext(StoreContext)
   const navigate = useNavigate()
   const location = useLocation()
-  const [activeScroll, setActiveScroll] = useState('Home')  // ✅ only for scroll links
+  const [activeScroll, setActiveScroll] = useState('Home')
+  const [menuOpen, setMenuOpen] = useState(false)  // ✅ hamburger state
 
   const navLinks = [
     { name: 'Home', path: '/', type: 'scroll' },
@@ -22,18 +23,16 @@ const Navbar = () => {
 
   const isActive = (link) => {
     if (link.type === 'page') {
-      // ✅ page links — use URL
       return location.pathname === link.path
     } else {
-      // ✅ scroll links — use activeScroll state
-      // but only when we're actually on the home page
       return location.pathname === '/' && activeScroll === link.name
     }
   }
 
   const handleNavClick = (link) => {
+    setMenuOpen(false)  // ✅ close menu on click
     if (link.type === 'scroll') {
-      setActiveScroll(link.name)  // ✅ update scroll active state
+      setActiveScroll(link.name)
       navigate('/')
       setTimeout(() => {
         const id = link.path.replace('/#', '')
@@ -41,17 +40,19 @@ const Navbar = () => {
         if (el) el.scrollIntoView({ behavior: 'smooth' })
       }, 100)
     } else {
-      setActiveScroll('')  // ✅ clear scroll active when going to a page
+      setActiveScroll('')
       navigate(link.path)
     }
   }
 
+  const handleSignInClick = () => {
+    setMenuOpen(false)
+    openLoginModal()
+  }
+
   return (
     <nav className="navbar">
-      <div className="navbar-logo" onClick={() => {
-        navigate('/')
-        setActiveScroll('Home')
-      }}>
+      <div className="navbar-logo" onClick={() => { navigate('/'); setActiveScroll('Home') }}>
         <img src={assets.satisfyChow} alt="Satisfy Chow" className="logo-img" />
         <div className="logo-text">
           <span className="logo-top">Satisfy</span>
@@ -59,6 +60,7 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Desktop links */}
       <ul className="navbar-links">
         {navLinks.map((link) => (
           <li
@@ -78,8 +80,31 @@ const Navbar = () => {
             <span className="cart-badge">{getCartCount()}</span>
           )}
         </div>
-        <button className="signin-btn">Sign In / Sign Up</button>
+        <button className="signin-btn" onClick={handleSignInClick}>Sign In / Sign Up</button>
+
+        {/* Hamburger button — mobile only */}
+        <button className="hamburger" onClick={() => setMenuOpen(prev => !prev)}>
+          {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+        </button>
       </div>
+
+      {/* Mobile menu */}
+      {menuOpen && (
+        <ul className="mobile-menu">
+          {navLinks.map((link) => (
+            <li
+              key={link.name}
+              className={isActive(link) ? 'active' : ''}
+              onClick={() => handleNavClick(link)}
+            >
+              <a href="#">{link.name}</a>
+            </li>
+          ))}
+          <li>
+            <button className="mobile-signin-btn" onClick={handleSignInClick}>Sign In / Sign Up</button>
+          </li>
+        </ul>
+      )}
     </nav>
   )
 }

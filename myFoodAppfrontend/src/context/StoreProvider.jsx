@@ -4,6 +4,7 @@ import { foodList } from "../assets/assets";
 
 const StoreProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
+  const [showLoginModal, setShowLoginModal] = useState(false);
 
   const addToCart = (itemId) => {
     setCartItems(prev => ({
@@ -47,6 +48,9 @@ const StoreProvider = (props) => {
     }, 0);
   };
 
+  const openLoginModal = () => setShowLoginModal(true);
+  const closeLoginModal = () => setShowLoginModal(false);
+
   const contextValue = {
     foodList,
     cartItems,
@@ -56,6 +60,9 @@ const StoreProvider = (props) => {
     clearCart,
     getCartCount,
     getCartTotal,
+    showLoginModal,
+    openLoginModal,
+    closeLoginModal,
   };
 
   return (
