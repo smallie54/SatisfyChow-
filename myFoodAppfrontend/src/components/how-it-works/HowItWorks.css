@@ -74,3 +74,102 @@
   margin-bottom: 60px;
   max-width: 80px;
 }
+/* ── TABLET (max 1024px) ── */
+@media (max-width: 1024px) {
+  .how-it-works {
+    padding: 48px 32px;
+  }
+
+  .step {
+    max-width: 140px;
+  }
+
+  .step-icon-wrap {
+    width: 60px;
+    height: 60px;
+  }
+
+  .step-title {
+    font-size: 13px;
+  }
+
+  .step-desc {
+    font-size: 12px;
+  }
+
+  .step-connector {
+    max-width: 40px;
+  }
+}
+
+/* ── MOBILE (max 768px) ── */
+@media (max-width: 768px) {
+  .how-it-works {
+    padding: 40px 20px;
+  }
+
+  .how-it-works-header {
+    margin-bottom: 36px;
+  }
+
+  .how-it-works-header h2 {
+    font-size: 22px;
+  }
+
+  /* Stack steps vertically on mobile */
+  .how-it-works-steps {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding-left: 20px;
+  }
+
+  .step {
+    flex-direction: row;
+    text-align: left;
+    max-width: 100%;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  /* Vertical connector line */
+  .step-connector {
+    width: 2px;
+    min-height: 32px;
+    border-top: none;
+    border-left: 2px dashed #F9731660;
+    margin: 0 0 0 29px;
+    max-width: none;
+  }
+
+  .step-icon-wrap {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+  }
+
+  .step-title {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .step-desc {
+    font-size: 13px;
+  }
+}
+
+/* ── SMALL MOBILE (max 480px) ── */
+@media (max-width: 480px) {
+  .how-it-works {
+    padding: 32px 16px;
+  }
+
+  .how-it-works-header h2 {
+    font-size: 20px;
+  }
+
+  .step-icon-wrap {
+    width: 48px;
+    height: 48px;
+  }
+}

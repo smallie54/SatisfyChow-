@@ -196,3 +196,80 @@
   min-width: 24px;
   text-align: center;
 }
+/* ── TABLET (max 1024px) ── */
+@media (max-width: 1024px) {
+  .food-item-img-cont {
+    height: 160px;
+  }
+
+  .food-item-name {
+    font-size: 14px;
+  }
+
+  .food-item-price {
+    font-size: 14px;
+  }
+}
+
+/* ── MOBILE (max 768px) ── */
+@media (max-width: 768px) {
+  .food-item-img-cont {
+    height: 140px;
+  }
+
+  .food-item-name {
+    font-size: 13px;
+  }
+
+  .food-item-price {
+    font-size: 13px;
+  }
+
+  .food-item-desc {
+    display: none;
+  }
+
+  .food-item-info {
+    padding: 10px 12px 12px;
+    gap: 6px;
+  }
+
+  .food-item-cart-btn {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .counter-btn {
+    width: 26px;
+    height: 26px;
+    font-size: 16px;
+  }
+
+  .counter-value {
+    font-size: 14px;
+  }
+}
+
+/* ── SMALL MOBILE (max 480px) ── */
+@media (max-width: 480px) {
+  .food-item-img-cont {
+    height: 120px;
+  }
+
+  .food-item-name {
+    font-size: 12px;
+  }
+
+  .food-item-price {
+    font-size: 12px;
+  }
+
+  .food-item-meta {
+    display: none;
+  }
+
+  .food-item-cart-btn {
+    font-size: 11px;
+    padding: 7px;
+  }
+}

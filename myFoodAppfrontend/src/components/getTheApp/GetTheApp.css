@@ -166,3 +166,72 @@
   color: #1a1a1a;
   margin: 0;
 }
+/* ── TABLET (max 1024px) ── */
+@media (max-width: 1024px) {
+  .get-the-app {
+    padding: 40px 32px;
+    gap: 24px;
+  }
+
+  .app-left h2 {
+    font-size: 26px;
+  }
+
+  .phone-mockup {
+    width: 170px;
+    height: 320px;
+  }
+}
+
+/* ── MOBILE (max 768px) ── */
+@media (max-width: 768px) {
+  .get-the-app {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .app-left {
+    align-items: center;
+  }
+
+  .app-left p {
+    max-width: 100%;
+  }
+
+  .app-store-btns {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  /* Hide phone mockup on mobile — saves space */
+  .app-middle {
+    display: none;
+  }
+
+  .app-right {
+    width: 100%;
+  }
+
+  .qr-placeholder {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* ── SMALL MOBILE (max 480px) ── */
+@media (max-width: 480px) {
+  .get-the-app {
+    padding: 32px 16px;
+  }
+
+  .app-left h2 {
+    font-size: 22px;
+  }
+
+  .app-store-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -8,6 +8,7 @@ import StoreProvider from './context/StoreProvider'
 import TrackOrder from './pages/TrackOrderPage/TrackOrder'
 import Checkout from './pages/CheckOutPage/Checkout'
 import LoginModal from './pages/LoginPage/LoginModal'
+import About from './pages/About/About'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path='/Place-Order-page' element={<PlaceOrder />} />
           <Route path='/track-order' element={<TrackOrder />} />
           <Route path='/Checkout' element={<Checkout />} />
+          <Route path='/About' element={<About/>} />
         </Routes>
       </div>
     </StoreProvider>

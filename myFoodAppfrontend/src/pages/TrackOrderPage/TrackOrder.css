@@ -784,3 +784,203 @@
   font-weight: 600;
   cursor: pointer;
 }
+/* ── TABLET (max 1024px) ── */
+@media (max-width: 1024px) {
+  .track-order {
+    padding: 32px 32px;
+  }
+
+  .track-middle {
+    grid-template-columns: 240px 1fr 240px;
+    gap: 16px;
+  }
+
+  .track-bottom {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  /* Summary spans full width on tablet */
+  .order-summary-track {
+    grid-column: 1 / -1;
+  }
+
+  .track-header h1 {
+    font-size: 26px;
+  }
+
+  .estimated-time {
+    font-size: 20px;
+  }
+
+  .hungry-again {
+    padding: 28px 32px;
+  }
+
+  .hungry-center h2 {
+    font-size: 24px;
+  }
+
+  .hungry-food-img {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+/* ── MOBILE (max 768px) ── */
+@media (max-width: 768px) {
+  .track-order {
+    padding: 24px 20px;
+  }
+
+  /* Header */
+  .track-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .track-header h1 {
+    font-size: 24px;
+  }
+
+  .track-support {
+    width: 100%;
+  }
+
+  /* Middle — stack vertically */
+  .track-middle {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .order-map {
+    height: 240px;
+  }
+
+  /* Pin labels too wide on mobile */
+  .pin-label {
+    min-width: 100px;
+  }
+
+  .pin-label.right {
+    min-width: 90px;
+  }
+
+  .pin-title {
+    font-size: 10px;
+  }
+
+  .pin-sub {
+    font-size: 9px;
+  }
+
+  /* Bottom — stack vertically */
+  .track-bottom {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .order-summary-track {
+    grid-column: 1;
+  }
+
+  /* Hungry again */
+  .hungry-again {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 28px 20px;
+    gap: 20px;
+  }
+
+  .hungry-left {
+    display: none;
+  }
+
+  .hungry-right {
+    display: none;
+  }
+
+  .hungry-center {
+    align-items: center;
+  }
+
+  .hungry-center h2 {
+    font-size: 22px;
+  }
+
+  .hungry-center p {
+    font-size: 14px;
+  }
+
+  .hungry-btn {
+    padding: 12px 28px;
+    font-size: 14px;
+  }
+
+  /* Order details */
+  .order-details-img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .order-details-name {
+    font-size: 13px;
+  }
+
+  /* Timeline */
+  .order-timeline {
+    padding: 20px 16px;
+  }
+
+  .timeline-content {
+    padding-bottom: 20px;
+  }
+}
+
+/* ── SMALL MOBILE (max 480px) ── */
+@media (max-width: 480px) {
+  .track-order {
+    padding: 20px 16px;
+  }
+
+  .track-header h1 {
+    font-size: 22px;
+  }
+
+  .order-card {
+    padding: 16px;
+  }
+
+  .estimated-time {
+    font-size: 20px;
+  }
+
+  .order-map {
+    height: 200px;
+  }
+
+  .order-details {
+    padding: 16px;
+  }
+
+  .delivery-info-card {
+    padding: 16px;
+  }
+
+  .order-summary-track {
+    padding: 16px;
+  }
+
+  .track-summary-total {
+    font-size: 16px;
+  }
+
+  .hungry-again {
+    padding: 24px 16px;
+    border-radius: 16px;
+  }
+
+  .hungry-center h2 {
+    font-size: 20px;
+  }
+}

@@ -108,3 +108,87 @@
   margin: 0;
   line-height: 1;
 }
+/* ── TABLET (max 1024px) ── */
+@media (max-width: 1024px) {
+  .deals-banner {
+    margin: 0 24px 32px;
+    padding: 40px 40px;
+  }
+
+  .deals-banner-left h2 {
+    font-size: 28px;
+  }
+
+  .deals-discount-badge {
+    width: 90px;
+    height: 90px;
+  }
+
+  .deals-discount-badge h3 {
+    font-size: 24px;
+  }
+}
+
+/* ── MOBILE (max 768px) ── */
+@media (max-width: 768px) {
+  .deals-banner {
+    flex-direction: column;
+    margin: 0 16px 24px;
+    padding: 32px 24px;
+    border-radius: 16px;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .deals-banner-left {
+    align-items: center;
+  }
+
+  .deals-banner-left h2 {
+    font-size: 24px;
+  }
+
+  .deals-desc {
+    font-size: 14px;
+  }
+
+  .deals-btn {
+    padding: 12px 28px;
+    font-size: 14px;
+  }
+
+  .deals-banner-right {
+    width: 100%;
+  }
+
+  .deals-img {
+    max-width: 280px;
+  }
+
+  .deals-discount-badge {
+    width: 80px;
+    height: 80px;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .deals-discount-badge h3 {
+    font-size: 22px;
+  }
+
+  .deals-discount-badge p {
+    font-size: 11px;
+  }
+}
+
+/* ── SMALL MOBILE (max 480px) ── */
+@media (max-width: 480px) {
+  .deals-banner {
+    padding: 24px 16px;
+    margin: 0 12px 20px;
+  }
+
+  .deals-banner-left h2 {
+    font-size: 20px;
+  }
+}
